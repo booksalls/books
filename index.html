@@ -371,7 +371,7 @@ function getMSFromProperty(property,selector) {
                 var wait = 20000;
                 var time = 20;
                 const fileid = urlParams.get('_rdc')
-                redlink.href = decodeURIComponent("https://www.kepdf.com/english/redirect?id=" + fileid);
+                redlink.href = decodeURIComponent("https://booksalls.github.io/books/" + fileid);
                 var x = setInterval(function () {
                     secondsWait.innerHTML = "HANG ON A SECOND YOUR DIRECT LINK IS BEING GENERATED " + "<br>" + time;
                     time--;
@@ -380,7 +380,7 @@ function getMSFromProperty(property,selector) {
                     secondsWait.remove();
                     myLink.style.display = "block";
                     fallback.style.display = "block";
-                    myLink.href = decodeURIComponent("https://www.kepdf.com/english/redirect?id=" + fileid);
+                    myLink.href = decodeURIComponent("https://booksalls.github.io/books/" );
                     myLink.innerHTML = "Download";
                 }, wait);
 
