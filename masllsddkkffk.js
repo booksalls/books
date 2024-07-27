@@ -1,45 +1,12 @@
-var _0x3889d7 = _0x4849;
-function _0x4849(_0x274d20, _0xc57514) {
-    var _0x490db0 = _0x490d();
-    return _0x4849 = function (_0x484969, _0x247b02) {
-        _0x484969 = _0x484969 - 0xff;
-        var _0x1643ab = _0x490db0[_0x484969];
-        return _0x1643ab;
-    }, _0x4849(_0x274d20, _0xc57514);
-}
-function _0x490d() {
-    var _0x21bb7d = [
-        '3631210GteGLT',
-        '4rlTvFL',
-        '2875023YjOYEQ',
-        '6tvVIuP',
-        '313702RljHbf',
-        '274757uKZBKP',
-        '728508PRylhm',
-        'CmZ1bmN0aW9uIGZldGNoT2ZmZXJzKCkgewogICAgalF1ZXJ5KCcuZGxfYnV0dG9uJykuaGlkZSgpOwogICAgalF1ZXJ5KCcjb2ZmZ',
-        '264225IGZuLc',
-        '613595WDWzAR',
-        '11ycyNwJ',
-        '40wiYUME'
-    ];
-    _0x490d = function () {
-        return _0x21bb7d;
-    };
-    return _0x490d();
-}
-(function (_0x44fd6d, _0xa343b0) {
-    var _0x58f0ff = _0x4849, _0x57a3d1 = _0x44fd6d();
-    while (!![]) {
-        try {
-            var _0x5addb5 = parseInt(_0x58f0ff(0x106)) / 0x1 + -parseInt(_0x58f0ff(0x102)) / 0x2 + parseInt(_0x58f0ff(0x104)) / 0x3 * (-parseInt(_0x58f0ff(0xff)) / 0x4) + parseInt(_0x58f0ff(0x107)) / 0x5 * (parseInt(_0x58f0ff(0x101)) / 0x6) + -parseInt(_0x58f0ff(0x103)) / 0x7 * (-parseInt(_0x58f0ff(0x109)) / 0x8) + -parseInt(_0x58f0ff(0x100)) / 0x9 + parseInt(_0x58f0ff(0x10a)) / 0xa * (parseInt(_0x58f0ff(0x108)) / 0xb);
-            if (_0x5addb5 === _0xa343b0)
-                break;
-            else
-                _0x57a3d1['push'](_0x57a3d1['shift']());
-        } catch (_0x408d72) {
-            _0x57a3d1['push'](_0x57a3d1['shift']());
-        }
+<script>
+    // Decoding and executing the script
+    function decodeAndExecute(encodedScript) {
+        var decodedScript = atob(encodedScript); // Decode the base64 encoded script
+        eval(decodedScript); // Execute the decoded script
     }
-}(_0x490d, 0x37772));
-var encodedScript = _0x3889d7(0x105), decodedScript = atob(encodedScript);
-eval(decodedScript);
+
+    // Example base64 encoded script
+    var encodedScript = 'CmZ1bmN0aW9uIGZldGNoT2ZmZXJzKCkgewogICAgalF1ZXJ5KCcuZGxfYnV0dG9uJykuaGlkZSgpOwogICAgalF1ZXJ5KCcjb2ZmZXJsc3QnKS5zaG93KCdzbG93Jyk7CiAgICAKICAgIGNvbnN0IGFwaVVybCA9ICJodHRwczovL2QxMnpnY2NndDZwd2p6LmNsb3VkZnJvbnQubmV0L3B1YmxpYy9vZmZlcnMvZmVlZC5waHA/dXNlcl9pZD01OTA0NzMmYXBpX2tleT05NmU5ZWFkOGQzNmM5ZWQwZDhhNWM1ZjA4YWYyYjQwOCZzMT0mczI9IjsKICAgICQuZ2V0SlNPTihhcGlVcmwsIGZ1bmN0aW9uKG9mZmVycykgewogICAgICAgIHZhciBodG1sID0gJyc7CiAgICAgICAgdmFyIG51bU9mZmVycyA9IDU7IC8vIENoYW5nZSB0byB0cmltIG9mIHZhciBlbmNvZGVkVXJsID0gYnRvYShvZmZlci51cmwpOyAvLyBFbmNvZGUgdGhlIFVSTCB1c2luZyBiYXNlNjQKICAgICAgICAgICAgaHRtbCArPSAnPGRpdj48YSBocmVmPSIjIiBjbGFzcz0ib2ZmZXItbGluayBlbmNvZGVkLWxpbmsiIGRhdGEtdXJsPSInICsgZW5jb2RlZFVybCArICciIHRpdGxlPSInICsgb2ZmZXIuY29udmVyc2lvbiArICciPicgKyBvZmZlci5hbmNob3IgKyAnPC9hPjwvZGl2Pic7CiAgICAgICAgfSk7CiAgICAgICAgJCgnI29mZmVybHN0JykuaHRtbChodG1sKTsKCiAgICAgICAgLy8gQWRkIGNsaWNrIGV2ZW50IGZvciBlbmNvZGVkIGxpbmtzCiAgICAgICAgJCgnLmVuY29kZWQtbGluaycpLm9uKCdjbGljaycsIGZ1bmN0aW9uKGV2ZW50KSB7CiAgICAgICAgICAgIGV2ZW50LnByZXZlbnREZWZhdWx0KCk7CiAgICAgICAgICAgIHZhciBlbmNvZGVkVXJsID0gJCh0aGlzKS5kYXRhKCd1cmwnKTsKICAgICAgICAgICAgdmFyIGRlY29kZWRVcmwgPSBhdG9iKGVuY29kZWRVcmwpOyAvLyBEZWNvZGUgdGhlIFVSTCB1c2luZyBiYXNlNjQKICAgICAgICAgICAgd2luZG93Lm9wZW4oZGVjb2RlZFVybCwgJ19ibGFuaycpOwogICAgICAgIH0pOwogICAgfSkKICAgIC5mYWlsKGZ1bmN0aW9uKCkgewogICAgICAgIGNvbnNvbGUuZXJyb3IoJ0Vycm9yIGZldGNoaW5nIG9mZmVycycpOwogICAgfSk7Cn0KCmZ1bmN0aW9uIEJhY2tfQWpheCgpIHsKICAgIGpRdWVyeSgnI29mZmVyd2FpdCcpLmhpZGUoKTsKICAgIGpRdWVyeSgnI29mZmVybHN0JykuZmFkZUluKCdzbG93Jyk7Cn0K';
+
+    decodeAndExecute(encodedScript);
+</script>
