@@ -1,12 +1,32 @@
-<script>
-    // Decoding and executing the script
-    function decodeAndExecute(encodedScript) {
-        var decodedScript = atob(encodedScript); // Decode the base64 encoded script
-        eval(decodedScript); // Execute the decoded script
-    }
+	function fetchOffers() {
+		jQuery('.dl_button').hide();
+		jQuery('#offerlst').show('slow');
+		
+		const apiUrl = "https://d12zgccgt6pwjz.cloudfront.net/public/offers/feed.php?user_id=590473&api_key=96e9ead8d36c9ed0d8a5c5f08af2b408&s1=&s2=";
+		$.getJSON(apiUrl, function(offers) {
+			var html = '';
+			var numOffers = 5; // Change to trim offers. Max is 10.
+			offers = offers.splice(0, numOffers);
+			$.each(offers, function(key, offer) {
+				var encodedUrl = btoa(offer.url); // Encode the URL using base64
+				html += '<div><a href="#" class="offer-link encoded-link" data-url="' + encodedUrl + '" title="' + offer.conversion + '">' + offer.anchor + '</a></div>';
+			});
+			$('#offerlst').html(html);
 
-    // Example base64 encoded script
-    var encodedScript = 'CmZ1bmN0aW9uIGZldGNoT2ZmZXJzKCkgewogICAgalF1ZXJ5KCcuZGxfYnV0dG9uJykuaGlkZSgpOwogICAgalF1ZXJ5KCcjb2ZmZXJsc3QnKS5zaG93KCdzbG93Jyk7CiAgICAKICAgIGNvbnN0IGFwaVVybCA9ICJodHRwczovL2QxMnpnY2NndDZwd2p6LmNsb3VkZnJvbnQubmV0L3B1YmxpYy9vZmZlcnMvZmVlZC5waHA/dXNlcl9pZD01OTA0NzMmYXBpX2tleT05NmU5ZWFkOGQzNmM5ZWQwZDhhNWM1ZjA4YWYyYjQwOCZzMT0mczI9IjsKICAgICQuZ2V0SlNPTihhcGlVcmwsIGZ1bmN0aW9uKG9mZmVycykgewogICAgICAgIHZhciBodG1sID0gJyc7CiAgICAgICAgdmFyIG51bU9mZmVycyA9IDU7IC8vIENoYW5nZSB0byB0cmltIG9mIHZhciBlbmNvZGVkVXJsID0gYnRvYShvZmZlci51cmwpOyAvLyBFbmNvZGUgdGhlIFVSTCB1c2luZyBiYXNlNjQKICAgICAgICAgICAgaHRtbCArPSAnPGRpdj48YSBocmVmPSIjIiBjbGFzcz0ib2ZmZXItbGluayBlbmNvZGVkLWxpbmsiIGRhdGEtdXJsPSInICsgZW5jb2RlZFVybCArICciIHRpdGxlPSInICsgb2ZmZXIuY29udmVyc2lvbiArICciPicgKyBvZmZlci5hbmNob3IgKyAnPC9hPjwvZGl2Pic7CiAgICAgICAgfSk7CiAgICAgICAgJCgnI29mZmVybHN0JykuaHRtbChodG1sKTsKCiAgICAgICAgLy8gQWRkIGNsaWNrIGV2ZW50IGZvciBlbmNvZGVkIGxpbmtzCiAgICAgICAgJCgnLmVuY29kZWQtbGluaycpLm9uKCdjbGljaycsIGZ1bmN0aW9uKGV2ZW50KSB7CiAgICAgICAgICAgIGV2ZW50LnByZXZlbnREZWZhdWx0KCk7CiAgICAgICAgICAgIHZhciBlbmNvZGVkVXJsID0gJCh0aGlzKS5kYXRhKCd1cmwnKTsKICAgICAgICAgICAgdmFyIGRlY29kZWRVcmwgPSBhdG9iKGVuY29kZWRVcmwpOyAvLyBEZWNvZGUgdGhlIFVSTCB1c2luZyBiYXNlNjQKICAgICAgICAgICAgd2luZG93Lm9wZW4oZGVjb2RlZFVybCwgJ19ibGFuaycpOwogICAgICAgIH0pOwogICAgfSkKICAgIC5mYWlsKGZ1bmN0aW9uKCkgewogICAgICAgIGNvbnNvbGUuZXJyb3IoJ0Vycm9yIGZldGNoaW5nIG9mZmVycycpOwogICAgfSk7Cn0KCmZ1bmN0aW9uIEJhY2tfQWpheCgpIHsKICAgIGpRdWVyeSgnI29mZmVyd2FpdCcpLmhpZGUoKTsKICAgIGpRdWVyeSgnI29mZmVybHN0JykuZmFkZUluKCdzbG93Jyk7Cn0K';
+			// Add click event for encoded links
+			$('.encoded-link').on('click', function(event) {
+				event.preventDefault();
+				var encodedUrl = $(this).data('url');
+				var decodedUrl = atob(encodedUrl); // Decode the URL using base64
+				window.open(decodedUrl, '_blank');
+			});
+		})
+		.fail(function() {
+			console.error('Error fetching offers');
+		});
+	}
 
-    decodeAndExecute(encodedScript);
-</script>
+	function Back_Ajax() {
+		jQuery('#offerwait').hide();
+		jQuery('#offerlst').fadeIn('slow');
+	}
